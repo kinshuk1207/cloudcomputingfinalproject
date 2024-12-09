@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Type Prediction Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center; /* Centers all content */
+        }
+        table {
+            margin: 20px auto; /* Centers the table horizontally */
+            width: 80%; /* Adjust the width to make the table smaller */
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 6px; /* Reduce padding to make cells smaller */
+            text-align: left;
+            font-size: 14px; /* Reduce font size */
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        button {
+            margin: 10px 5px;
+            padding: 8px 12px; /* Adjust button size */
+            font-size: 14px; /* Reduce button font size */
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <style>
+        .prediction {
+            font-weight: bold;
+            padding: 4px;
+            margin: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .prediction:hover {
+            background-color: #f0f0f0;
+        }
+        .prediction.red {
+            color: red;
+        }
+        .prediction.green {
+            color: green;
+        }
+        #predictionRow {
+            background-color: #f9f9f9; /* Light background to distinguish prediction rows */
+        }
+    </style>
+    
+    
+    
+    
+</head>
+<body>
+    <h1>Pitch Type Prediction Simulator</h1>
+
+    <table id="playDataTable">
+        <thead>
+            <tr>
+                <th>Game Date</th>
+                <th>Inning</th>
+                <th>Top/Bottom</th>
+                <th>Player Name</th>
+                <th>Events</th>
+                <th>Description</th>
+                <th>Pitch Type</th>
+                <th>Outs</th>
+                <th>Balls</th>
+                <th>Strikes</th>
+                <th>Bat Score</th>
+                <th>Field Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be appended here -->
+        </tbody>
+    </table>
+
+    <div>
+        <button onclick="startSimulation()">Start</button>
+        <button onclick="nextSimulation()">Next</button>
+        <button onclick="pauseForPrediction()">Pause for Prediction</button>
+        <button onclick="resumeSimulation()">Resume</button>
+    </div>
+
+    <div id="predictions">
+        <p>Predictions: None</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
